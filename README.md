@@ -1,18 +1,15 @@
-To download and install SSH on Kali Linux, you can use the following steps:
+To install and run SSH on Kali Linux, follow these steps:
 
-## Open a terminal window on your Kali Linux system.
-
-### Update the package manager index by running the following command:
-
+Open a terminal window and enter the following command to update the package list:
 Copy code
-``` sudo apt update ```
-Install the SSH server by running the following command:
+`sudo apt update`
+Once the package list has been updated, enter the following command to install the OpenSSH server package:
 Copy code
-``` sudo apt install openssh-server ```
-After the installation is complete, you can start the SSH server by running the following command:
+`sudo apt install openssh-server`
+After the installation is complete, you can start the SSH service by running the following command:
 Copy code
-``` sudo systemctl start ssh ```
-To enable the SSH server to start automatically at startup, run the following command:
+`sudo systemctl start ssh`
+To check if the SSH service is running, you can use the following command:
 Copy code
-``` sudo systemctl enable ssh ``` 
-After completing these steps, the SSH server should be installed and enabled on your Kali Linux system. You can then use an SSH client to connect to the server from another computer.
+`sudo systemctl status ssh`
+The output should indicate that the SSH service is active and running. If you see an error message or the service is not running, you may need to troubleshoot the issue. For more information, you can refer to the documentation for OpenSSH on Kali Linux.
